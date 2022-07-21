@@ -1,0 +1,13 @@
+#TODO
+    [] Individualize projects
+    [] Add Icons
+    [] Make Collaboration page prettier
+    [x] Fix collaboration form
+    [x] (hardish/optional) Fix and add a proper carousel for technologies
+    [x] Better Footer
+    [x] Fix navigation problems (add home button)
+    [x] Font for the buttons on collaborate page is slightly off compared to the other pages.
+    [] Filter by technology
+    [] Error handling
+    [x] Level navbar text
+    [] Add helpers especially in contact page/collaboration page

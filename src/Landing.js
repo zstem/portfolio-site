@@ -4,62 +4,112 @@ import reactpic from './react.png';
 import htmlpic from './html.png';
 import csspic from './css.png';
 import vuepic from './vue.png';
+import jspic from './js.png';
+import nodepic from './node.png';
+import expresspic from './express.png';
+import nextpic from './next.png';
+import project1 from './project1.png';
+import project2 from './project2.png';
+import project3 from './project3.png';
 import { Link } from 'react-router-dom';
 
 
 function Landing() {
   
+  function scrolltoTop() {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <div className="container">
       <span className="intro">
         <div className="row">
           <div className="col">
             <h2>A brief introduction</h2>
-            <p>Hello, welcome to my portfolio website! I am an Alumni from the University of Ottawa currently learning all there is to know about web development </p>
+            <p>Hello, welcome to my portfolio website! I am Alumni from the University of Ottawa where I studied Computer Science. I am currently learning all there is to know about web development. I pride myself on my attention to detail when it comes to user experiences and design. <br></br> <br></br>You can learn more about what I do and what projects I've worked on by exploring the site!</p>
           </div>
           <div className="col">
-            <img className="pic" src={intropic} alt='intro picture' width="500px" height="auto"></img>
+            <img className="pic" src={intropic} alt='picture of developer' width="500px" height="auto"></img>
           </div>
         </div>
         <div className="row">
           <h2 className="header-text">Tools and Technologies</h2>
-          <span className="techpics-row">
-            
-            <a href="https://reactjs.org/docs/getting-started.html" target="_blank"><img src={reactpic} alt='intro picture' width="230px" height="200px" ></img></a>
-            <a href="https://www.w3schools.com/TAgs/default.asp" target="_blank"><img src={htmlpic} alt='intro picture' width="200px" height="200px" className="techpics"></img></a>
-            <a href="https://www.w3schools.com/cssref/" target="_blank"><img src={csspic} alt='intro picture' width="auto" height="200px" className="techpics"></img></a>
-            <a href="https://vuejs.org/guide/introduction.html" target="_blank" data-toggle="tooltip" data-placement="right" title="Tooltip on right"><img src={vuepic} alt='intro picture' width="auto" height="200px" className="techpics"></img></a>
-          </span>
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-xride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="d-flex justify-content-center">
+                <a href="https://www.w3schools.com/TAgs/default.asp" target="_blank"><img src={htmlpic} alt='intro picture' width="200px" height="200px"></img></a>
+                <a href="https://www.w3schools.com/cssref/" target="_blank"><img src={csspic} alt='intro picture' width="auto" height="200px" className="techpics"></img></a> 
+                <a href="https://www.w3schools.com/cssref/" target="_blank"><img src={jspic} alt='intro picture' width="auto" height="200px" className="techpics"></img></a> 
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                  <a href="https://reactjs.org/docs/getting-started.html" target="_blank"><img src={reactpic} width="230px" height="200px" ></img></a>
+                  <a href="https://vuejs.org/guide/introduction.html" target="_blank" data-toggle="tooltip" data-placement="right" title="Tooltip on right"><img src={vuepic} alt='intro picture' width="auto" height="200px" className="techpics"></img></a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                  <span class="tbd d-flex justify-content-center align-items-center">
+                    <a href="https://www.w3schools.com/TAgs/default.asp" target="_blank"><img src={expresspic} width="230px" height="200px"></img></a>
+                    <a href="https://www.w3schools.com/cssref/" target="_blank"><img src={nextpic} width="230" height="200px" className="techpics"></img></a> 
+                    <a href="https://www.w3schools.com/cssref/" target="_blank"><img src={nodepic} width="230" height="200px" className="techpics"></img></a> 
+                  </span>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only arrow-left">{"<"}</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only arrow-right">{">"}</span>
+            </a>
+          </div>
         </div>
         <div className="row">
           <span className="header-duo">
             <h2>Featured Projects</h2>
-            <Link to="/projects"><h6 class="subtext">View All</h6></Link>
+            <Link onClick={() => scrolltoTop()} to="/projects"><h6 class="subtext">View All</h6></Link>
           </span>
+          <div className="row pic-background">
+            <div className="col">
+              <img className="pic-featured-projects" src={project1} alt='intro picture' width="500px" height="auto"></img>
+            </div>
+            <div className="col">
+            <h4>Todo List</h4>
+            <p>Hello, welcome to my portfolio website! I am an Alumni from the University of Ottawa currently learning all there is to know about web development </p>
+            </div>
+          </div>
+        </div>
+        <div className="row pic-background"> 
           <div className="col">
-            <img className="pic" src={intropic} alt='intro picture' width="500px" height="auto"></img>
+            <img className="pic-featured-projects" src={project2} alt='intro picture' width="500px" height="auto"></img>
           </div>
           <div className="col">
+          <h4>Twitter Clone</h4>
           <p>Hello, welcome to my portfolio website! I am an Alumni from the University of Ottawa currently learning all there is to know about web development </p>
           </div>
         </div>
-        <div className="row"> 
+        <div className="row pic-background"> 
           <div className="col">
-            <img className="pic-featured-projects" src={intropic} alt='intro picture' width="500px" height="auto"></img>
+            <img className="pic-featured-projects" src={project3} alt='intro picture' width="500px" height="auto"></img>
           </div>
           <div className="col">
-          <p>Hello, welcome to my portfolio website! I am an Alumni from the University of Ottawa currently learning all there is to know about web development </p>
-          </div>
-        </div>
-        <div className="row"> 
-          <div className="col">
-            <img className="pic-featured-projects" src={intropic} alt='intro picture' width="500px" height="auto"></img>
-          </div>
-          <div className="col">
+          <h4>Real-Time Messaging App</h4>
           <p>Hello, welcome to my portfolio website! I am an Alumni from the University of Ottawa currently learning all there is to know about web development </p>
           </div>
         </div>
       </span>
+      <footer>
+        <p class="copyright">Bob's Portfolio Page © 2022</p>
+        <Link onClick={() => scrolltoTop()} to="/"><p className="custom-link footer-text">Home</p></Link>
+        <Link onClick={() => scrolltoTop()} to="/projects"><p className="custom-link footer-text">Projects</p></Link>
+        <Link onClick={() => scrolltoTop()} to="/collaborate"><p className="custom-link footer-text">Collaborate</p></Link>
+        <p className="footer-text"><a href="#nav">Back to Top</a></p>
+      </footer>
     </div>
     
   );
