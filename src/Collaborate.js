@@ -71,7 +71,7 @@ function Collaborate() {
               {frontEnd}
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" onFocus={() => setCount(count + 1)} onClick={() => {handleFrontEnd("React - Front End"); setFrontCardTitle("React"); setFrontPic(reactpic)}} href="#">React</a>
+              <a class="dropdown-item" onFocus={() => setCount(count + 1)} onClick={() => {handleFrontEnd("React"); setFrontCardTitle("React - Front End"); setFrontPic(reactpic)}} href="#">React</a>
               <a class="dropdown-item" onClick={() => {handleFrontEnd("Vue"); setFrontCardTitle("Vue - Front End"); setFrontPic(vuepic)}} href="#">Vue</a>
               <a class="dropdown-item" onClick={() => {handleFrontEnd("Vanilla JS"); setFrontCardTitle("Vanilla JS - Front End"); setFrontPic(jspic)}} href="#">Vanilla JS</a>
             </div>

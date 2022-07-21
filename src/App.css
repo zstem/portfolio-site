@@ -59,7 +59,7 @@ footer {
 }
 
 .collab-email {
-  width: 20vw;
+  width: 300px;
   font-style: italic;
 }
 
@@ -77,8 +77,8 @@ footer {
 
 #collab-message {
   margin-top: 20px;
-  width: 20vw;
-  height: 21.25vh;
+  width: 300px;
+  height: 100px;
   font-style: italic;
 }
 
