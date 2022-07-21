@@ -11,6 +11,8 @@ import nextpic from './next.png';
 import project1 from './project1.png';
 import project2 from './project2.png';
 import project3 from './project3.png';
+import webpic from './website.svg';
+import githubpic from './github.svg';
 import { Link } from 'react-router-dom';
 
 
@@ -18,6 +20,10 @@ function Landing() {
   
   function scrolltoTop() {
     window.scrollTo(0, 0);
+  }
+
+  function fakeLink(linkString) {
+    alert("Pretend this opened a new tab for the " + linkString)
   }
 
   return (
@@ -81,6 +87,8 @@ function Landing() {
             <div className="col">
             <h4>Todo List</h4>
             <p>Hello, welcome to my portfolio website! I am an Alumni from the University of Ottawa currently learning all there is to know about web development </p>
+            <Link to="/" onClick={() => {scrolltoTop(); fakeLink("Todo List Application")}}><img src={webpic} alt='intro picture' width="30px" height="30px"></img></Link>
+            <Link to="/" className="ml-5" onClick={() => {scrolltoTop(); fakeLink("Todo List GitHub")}}><img src={githubpic} alt='intro picture' width="30px" height="30px"></img></Link>
             </div>
           </div>
         </div>
@@ -91,6 +99,8 @@ function Landing() {
           <div className="col">
           <h4>Twitter Clone</h4>
           <p>Hello, welcome to my portfolio website! I am an Alumni from the University of Ottawa currently learning all there is to know about web development </p>
+          <Link to="/" onClick={() => {scrolltoTop(); fakeLink("Twitter Clone App")}}><img src={webpic} alt='intro picture' width="30px" height="30px"></img></Link>
+          <Link to="/" className="ml-5" onClick={() => {scrolltoTop(); fakeLink("Twitter Clone GitHub")}}><img src={githubpic} alt='intro picture' width="30px" height="30px"></img></Link>
           </div>
         </div>
         <div className="row pic-background"> 
@@ -100,6 +110,8 @@ function Landing() {
           <div className="col">
           <h4>Real-Time Messaging App</h4>
           <p>Hello, welcome to my portfolio website! I am an Alumni from the University of Ottawa currently learning all there is to know about web development </p>
+          <Link to="/" onClick={() => {scrolltoTop(); fakeLink("Real-Time Messaging App")}}><img src={webpic} alt='intro picture' width="30px" height="30px"></img></Link>
+          <Link to="/" className="ml-5" onClick={() => {scrolltoTop(); fakeLink("Real-Time Messaging App GitHub")}}><img src={githubpic} alt='intro picture' width="30px" height="30px"></img></Link>
           </div>
         </div>
       </span>

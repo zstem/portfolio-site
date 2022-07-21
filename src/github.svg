@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+	<title>github-svg</title>
+	<defs>
+		<image width="64" height="62" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAA+AQMAAAChj48sAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAACnDpXhkfMwAAAAJ0Uk5TAP9bkSK1AAAA1UlEQVR4nJ3RMQ7DIAwFUKMMjDkCR8nR4GjcoFdg64rUhUoI93+7SiO1UzNET4kNHyMioir27KrdcKhOg6r/24gKRKIBiRhe69WZWO8mtgVH8W72n4iOJvvCQiN3AN8akFaoW8kD4M7A4ZgfZMf6BQuOSj/BoWIpkfeC7qf9F98Lnjg3PeHB9JLQJqpE5WQXyjoXxgHZxtdx0xY51nQ3YBoPrRuxP7UEXlR0NIkzO7ZpQ68SlqFgGwM3bsCyTCieFhcYdiSg2+UCvNxAFMtbguWWJILaF/dI8OIq96NxAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="img2" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+</svg>
