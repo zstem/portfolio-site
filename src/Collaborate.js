@@ -8,6 +8,7 @@ import jspic from './js.png';
 import nodepic from './node.png';
 import expresspic from './express.png';
 import nextpic from './next.png';
+import whitepic from './whitebackground.png'
 
 
 
@@ -17,8 +18,8 @@ function Collaborate() {
 
   const [backEnd, handleBackEnd] = useState("Pick a Back End");
 
-  const [frontPic, setFrontPic] = useState();
-  const [backPic, setBackPic] = useState();
+  const [frontPic, setFrontPic] = useState(whitepic);
+  const [backPic, setBackPic] = useState(whitepic);
 
   const [frontCardTitle, setFrontCardTitle] = useState("Pick a Front End");
   const [backCardTitle, setBackCardTitle] = useState("Pick a Back End");
@@ -43,7 +44,7 @@ function Collaborate() {
     }
   }
 
-  function handleSubmit(e) {
+  function noRefresh(e) {
     e.preventDefault();
   }
 
@@ -64,15 +65,15 @@ function Collaborate() {
         <div class="row">
           <div class="col">
           <form class="form-group" onMouseOver={() => checkStatus()}>
-        <input type="email" class="form-control collab-email" aria-describedby="emailHelp" id="collab-email" placeholder="Enter Email"></input><span>(required)</span>
+        <input type="email" class="form-control collab-email" aria-describedby="emailHelp" id="collab-email" placeholder="Enter Email"></input><span class="required">(required)</span>
         <div class="dropdown">
             <button onChange={() => setFrontCardTitle({frontEnd})} class="btn btn-primary dropdown-toggle italic" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {frontEnd}
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" onFocus={() => setCount(count + 1)} onClick={() => {handleFrontEnd("React"); setFrontCardTitle("React"); setFrontPic(reactpic)}} href="#">React</a>
-              <a class="dropdown-item" onClick={() => {handleFrontEnd("Vue"); setFrontCardTitle("Vue"); setFrontPic(vuepic)}} href="#">Vue</a>
-              <a class="dropdown-item" onClick={() => {handleFrontEnd("Vanilla JS"); setFrontCardTitle("Vanilla JS"); setFrontPic(jspic)}} href="#">Vanilla JS</a>
+              <a class="dropdown-item" onFocus={() => setCount(count + 1)} onClick={() => {handleFrontEnd("React - Front End"); setFrontCardTitle("React"); setFrontPic(reactpic)}} href="#">React</a>
+              <a class="dropdown-item" onClick={() => {handleFrontEnd("Vue"); setFrontCardTitle("Vue - Front End"); setFrontPic(vuepic)}} href="#">Vue</a>
+              <a class="dropdown-item" onClick={() => {handleFrontEnd("Vanilla JS"); setFrontCardTitle("Vanilla JS - Front End"); setFrontPic(jspic)}} href="#">Vanilla JS</a>
             </div>
           </div>
           <div class="dropdown dropdown2">
@@ -80,14 +81,14 @@ function Collaborate() {
               {backEnd}
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" onClick={() => {handleBackEnd("Node JS"); setBackCardTitle("Node JS"); setBackPic(nodepic)}} href="#">Node JS</a>
-              <a class="dropdown-item" onClick={() => {handleBackEnd("Next JS"); setBackCardTitle("Next JS"); setBackPic(nextpic)}} href="#">Next JS</a>
-              <a class="dropdown-item" onClick={() => {handleBackEnd("Express JS"); setBackCardTitle("Express JS"); setBackPic(expresspic)}} href="#">Express JS</a>
+              <a class="dropdown-item" onClick={() => {handleBackEnd("Node JS"); setBackCardTitle("Node JS - Back End"); setBackPic(nodepic)}} href="#">Node JS</a>
+              <a class="dropdown-item" onClick={() => {handleBackEnd("Next JS"); setBackCardTitle("Next JS - Back End"); setBackPic(nextpic)}} href="#">Next JS</a>
+              <a class="dropdown-item" onClick={() => {handleBackEnd("Express JS"); setBackCardTitle("Express JS - Back End"); setBackPic(expresspic)}} href="#">Express JS</a>
             </div>
           </div>
-          <textarea class="form-control collab-message" id="collab-message" placeholder="Enter Message"></textarea><span>(required)</span>
+          <textarea class="form-control collab-message" id="collab-message" placeholder="Enter Message"></textarea><span class="required">(required)</span>
           <div>
-            <button onClick={() => {setStatus("Email sent sucessfully with your inquiry"); checkStatus(); clearForms()}} id="submit-btn" class="btn btn-primary submit-btn italic">Submit</button>
+            <button onClick={(e) => {setStatus("Email sent sucessfully with your inquiry"); checkStatus(); clearForms(); noRefresh(e);}} id="submit-btn" class="btn btn-primary submit-btn italic">Submit</button>
             <h6 id="status-text">{statusText}</h6>
           </div>
           
@@ -96,32 +97,26 @@ function Collaborate() {
           <div class="col col-front">
             
             <div class="card mx-auto">
-              <img src={frontPic} class="backEndCardPhoto" alt='' onerror="this.onerror=null" width="230px" height="200px" ></img>
+              <img src={frontPic} class="backEndCardPhoto" alt='' width="220px" height="200px" ></img>
+              <hr class="hr-solid"></hr>
               <div class="card-body">
-                <h5>{frontCardTitle} - Front End</h5>
+                <h5>{frontCardTitle}</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
             
-            {/* <img src={frontPic} alt='' onerror="this.onerror=null" width="230px" height="200px" ></img>
-            <hr class="solid"></hr>
-            <img src={backPic} alt='' onerror="this.onerror=null" width="230px" height="200px" ></img> */}
           </div>
           <div class="col">
             <div class="card">
-              <img src={backPic} alt='' class="backEndCardPhoto" onerror="this.onerror=null" width="230px" height="200px" ></img>
+              <img src={backPic} class="backEndCardPhoto" width="220px" height="200px" ></img>
+              <hr class="hr-solid"></hr>
               <div class="card-body">
-                <h5 class="">{backCardTitle} - Back End</h5>
+                <h5 class="">{backCardTitle}</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
-            
-            {/* <img src={frontPic} alt='' onerror="this.onerror=null" width="230px" height="200px" ></img>
-            <hr class="solid"></hr>
-            <img src={backPic} alt='' onerror="this.onerror=null" width="230px" height="200px" ></img> */}
           </div>
         </div>
-        
       </div>
       <footer>
         <p class="copyright">Bob's Portfolio Page © 2022</p>

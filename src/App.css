@@ -92,7 +92,7 @@ a {
 }
 
 .backEndCardPhoto {
-  border: rgba(95,95,95, 25%) 1px solid;
+
 }
 
 .card {
@@ -160,6 +160,12 @@ h6{
 .pic-background {
   background-color: rgb(241, 246, 255);
   border-radius: 5px;
+}
+
+.required {
+  color: rgb(10,112,233);
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .techpics-row {
