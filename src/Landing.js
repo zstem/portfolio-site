@@ -82,7 +82,7 @@ function Landing() {
           </span>
           <div className="row pic-background">
             <div className="col">
-              <img className="pic-featured-projects" src={project1} alt='intro picture' width="500px" height="auto"></img>
+              <img className="pic-projects" src={project1} alt='intro picture' width="500px" height="auto"></img>
             </div>
             <div className="col">
             <h4>Todo List</h4>
@@ -94,7 +94,7 @@ function Landing() {
         </div>
         <div className="row pic-background"> 
           <div className="col">
-            <img className="pic-featured-projects" src={project2} alt='intro picture' width="500px" height="auto"></img>
+            <img className="pic-projects" src={project2} alt='intro picture' width="500px" height="auto"></img>
           </div>
           <div className="col">
           <h4>Twitter Clone</h4>
@@ -105,7 +105,7 @@ function Landing() {
         </div>
         <div className="row pic-background"> 
           <div className="col">
-            <img className="pic-featured-projects" src={project3} alt='intro picture' width="500px" height="auto"></img>
+            <img className="pic-projects" src={project3} alt='intro picture' width="500px" height="auto"></img>
           </div>
           <div className="col">
           <h4>Real-Time Messaging App</h4>
